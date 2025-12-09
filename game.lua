@@ -3052,9 +3052,10 @@ function drawentity(j, w, i, v, currentscissor, drop)
 			if v.graphiccolor and (not drop) then
 				love.graphics.setColor(v.graphiccolor)
 			end
-			if v.blending then
+			if v.blendmode then
 				if v.premultiplied then
-					love.graphics.setBlendMode(v.blendmode,"premultiplied") else
+					love.graphics.setBlendMode(v.blendmode,"premultiplied")
+				else
 				    love.graphics.setBlendMode(v.blendmode)
 				end
 			end
